@@ -11,6 +11,12 @@ jobs:
           paths:
             - build/
             - .gradle/
+  checkstyle:
+    docker:
+      - image: gradle:alpine
+    steps:
+      - checkout
+      - run: ./gradlew bootJar
   test:
     docker:
       - image: gradle:alpine
@@ -56,6 +62,9 @@ workflows:
     jobs:
       - build
       - test
+      - checkstyle:
+          requires:
+            - build
       - package:
           requires:
             - build
@@ -63,5 +72,6 @@ workflows:
           requires:
            - test
            - package
+
 
 

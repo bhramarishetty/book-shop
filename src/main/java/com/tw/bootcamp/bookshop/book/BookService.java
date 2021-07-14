@@ -17,4 +17,6 @@ public class BookService {
     public List<Book> fetchAll() {
         return bookRepository.findAllByOrderByPriceDesc();
     }
+
+    //public BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositorpublic BookService(BookRepository bookRepositor
 }
